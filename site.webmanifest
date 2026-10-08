@@ -1,0 +1,17 @@
+{
+  "name": "Aivoryx NRIC Generator",
+  "short_name": "NRIC Generator",
+  "description": "Generate and validate Singapore NRIC / FIN test numbers locally in your browser.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#2449c7",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

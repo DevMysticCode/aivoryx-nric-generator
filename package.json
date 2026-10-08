@@ -1,0 +1,17 @@
+{
+  "name": "aivoryx-nric-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone Aivoryx microsaas for generating and validating Singapore NRIC/FIN test data.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "singapore nric generator",
+    "fin validator",
+    "test data generator",
+    "aivoryx"
+  ]
+}

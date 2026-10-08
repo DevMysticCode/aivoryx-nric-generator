@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en-SG">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta -->
+    <title>Free Singapore NRIC Generator — Generate &amp; Validate NRIC / FIN</title>
+    <meta name="description" content="Free Singapore NRIC and FIN generator for developers and QA. Get checksum-valid test numbers in one click, validate any NRIC, and bulk export — in your browser." />
+    <meta
+      name="keywords"
+      content="nric generator, singapore nric generator, fin generator, nric validator, fin validator, nric checksum, fake nric for testing, nric test data, random nric, singapore ic generator"
+    />
+    <meta name="author" content="Aivoryx" />
+    <meta name="application-name" content="Aivoryx NRIC Generator" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#2449c7" />
+    <meta name="geo.region" content="SG" />
+    <meta name="geo.placename" content="Singapore" />
+    <link rel="canonical" href="https://nric-generator.aivoryx.com/" />
+
+    <!-- Icons / manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aivoryx NRIC Generator" />
+    <meta property="og:title" content="Free Singapore NRIC Generator — Generate &amp; Validate NRIC / FIN" />
+    <meta property="og:description" content="Generate checksum-valid Singapore NRIC and FIN test numbers in one click, validate any NRIC, and bulk export — free and 100% in your browser." />
+    <meta property="og:url" content="https://nric-generator.aivoryx.com/" />
+    <meta property="og:image" content="https://nric-generator.aivoryx.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Aivoryx NRIC Generator showing a generated Singapore NRIC test number" />
+    <meta property="og:locale" content="en_SG" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Singapore NRIC Generator — Generate &amp; Validate NRIC / FIN" />
+    <meta name="twitter:description" content="Generate checksum-valid Singapore NRIC and FIN test numbers in one click, validate any NRIC, and bulk export — free and 100% in your browser." />
+    <meta name="twitter:image" content="https://nric-generator.aivoryx.com/og-image.png" />
+
+    <!-- Perf hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+    />
+    <link rel="stylesheet" href="/src/styles.css?v=4" />
+
+    <!-- Google Analytics 4 (shared Aivoryx property) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L72SPZ29T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9L72SPZ29T');
+    </script>
+
+    <!-- Structured data. FAQ and HowTo text mirrors the visible page copy. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://nric-generator.aivoryx.com/#app",
+            "name": "Aivoryx NRIC Generator",
+            "alternateName": [
+              "Singapore NRIC Generator",
+              "Singapore NRIC / FIN Generator and Validator",
+              "NRIC Generator by Aivoryx"
+            ],
+            "url": "https://nric-generator.aivoryx.com/",
+            "description": "Free Singapore NRIC and FIN generator for developers and QA. Get checksum-valid test numbers in one click, validate any NRIC, and bulk export — in your browser.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "isAccessibleForFree": true,
+            "inLanguage": "en-SG",
+            "image": "https://nric-generator.aivoryx.com/og-image.png",
+            "dateModified": "2026-10-08",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "One-click Singapore NRIC and FIN test number generation",
+              "Checksum-valid S, T, F and G series",
+              "NRIC and FIN checksum validator",
+              "Format-only M-series FIN support",
+              "Bulk generation of up to 250 values",
+              "Valid and invalid QA edge-case pack",
+              "Export as plain text, CSV, JSON, TypeScript, Python and SQL",
+              "Runs entirely in the browser with no sign-up"
+            ],
+            "publisher": {
+              "@id": "https://aivoryx.com/#organization"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://aivoryx.com/#organization",
+            "name": "Aivoryx",
+            "url": "https://aivoryx.com/"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://nric-generator.aivoryx.com/#website",
+            "name": "Aivoryx NRIC Generator",
+            "url": "https://nric-generator.aivoryx.com/",
+            "inLanguage": "en-SG",
+            "publisher": {
+              "@id": "https://aivoryx.com/#organization"
+            }
+          },
+          {
+            "@type": "HowTo",
+            "name": "How to generate a Singapore NRIC or FIN test number",
+            "totalTime": "PT5S",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Choose a type",
+                "text": "Pick NRIC, FIN or Either. NRIC is selected by default."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Click Generate",
+                "text": "A new checksum-valid number appears instantly. Click again for another."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Copy and paste",
+                "text": "Click Copy, or click the number itself, then paste it into your form or test."
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a Singapore NRIC generator?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Singapore NRIC generator creates random numbers that follow the NRIC or FIN format and pass the checksum, so developers and QA testers can fill in forms, seed databases and write automated tests without using a real person’s identity number."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the generated NRIC numbers real?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Every number is random, synthetic test data. A value that passes the checksum only has the right structure; it does not prove that the number was ever issued or that it belongs to anyone."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the format of an NRIC or FIN?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nine characters: one prefix letter (S or T for NRIC; F, G or M for FIN), seven digits, and one check letter calculated from the prefix and digits. Example: S1234567D."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is the NRIC checksum calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Multiply the seven digits by the weights 2, 7, 6, 5, 4, 3, 2 and add the results. Add 4 if the prefix is T or G. Take the remainder after dividing by 11 and look it up in the check-letter table: J Z I H G F E D C B A for S and T, or X W U T R Q P N M L K for F and G. For S1234567 the sum is 106, the remainder is 7, and the check letter is D."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between NRIC and FIN?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An NRIC (National Registration Identity Card number) is issued to Singapore citizens and permanent residents and starts with S or T. A FIN (Foreign Identification Number) is issued to foreigners holding long-term passes and starts with F, G or M. Both share the same nine-character layout."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is the M-series FIN handled differently?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "M-series FINs were introduced on 1 January 2022. The format is public, but the official checksum rule has not been published, so this tool generates and checks M-series values by format only instead of claiming checksum verification."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is generated or validated data uploaded?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Generation, validation, copying and exports all run locally in your browser. The numbers you generate or paste are never sent to a server."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this NRIC generator free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. It is free, has no sign-up, and has no limit on how many numbers you generate."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use these values in production?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Use them only as synthetic test data. Do not use generated NRIC or FIN values for authentication, account recovery, KYC, or any workflow involving a real person."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Aivoryx",
+                "item": "https://aivoryx.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "NRIC Generator",
+                "item": "https://nric-generator.aivoryx.com/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Aivoryx NRIC Generator home">
+        <span class="mark">AX</span>
+        <span>Aivoryx NRIC Generator</span>
+      </a>
+      <nav class="topnav" aria-label="Tool sections">
+        <a href="#tool">Generator</a>
+        <a href="#bulk">Bulk</a>
+        <a href="#validator">Validator</a>
+        <a href="#faq">FAQ</a>
+        <a href="#more-tools">More tools</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="quick" id="tool">
+        <h1>Singapore NRIC Generator</h1>
+        <p class="intro">
+          Free checksum-valid NRIC and FIN test numbers for developers and QA. Click, copy, done.
+        </p>
+
+        <div class="panel quick-card">
+          <div class="segmented" role="group" aria-label="Type of number">
+            <button type="button" data-quick-series="NRIC" aria-pressed="true">NRIC</button>
+            <button type="button" data-quick-series="FIN" aria-pressed="false">FIN</button>
+            <button type="button" data-quick-series="ANY" aria-pressed="false">Either</button>
+          </div>
+
+          <button class="quick-value mono" id="quickValue" type="button" title="Click to copy" aria-live="polite"></button>
+          <p class="quick-hint" id="quickHint">Click the number to copy it</p>
+
+          <div class="quick-actions">
+            <button class="primary-button large" id="quickGenerateButton" type="button">Generate</button>
+            <button class="secondary-button large" id="quickCopyButton" type="button">Copy</button>
+          </div>
+        </div>
+
+        <p class="quick-foot">
+          Synthetic test data only &middot; nothing is uploaded &middot;
+          <a href="#bulk">need a batch?</a>
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Bulk generator and validator">
+        <section class="panel bulk-panel" id="bulk" aria-labelledby="bulk-title">
+          <div class="panel-head">
+            <div>
+              <h2 id="bulk-title">Bulk generate</h2>
+              <p id="resultSummary">Ready for test fixtures.</p>
+            </div>
+            <button class="secondary-button small" id="qaButton" type="button" title="Load a fixed set of valid and invalid edge cases">Load QA edge cases</button>
+          </div>
+
+          <div class="controls">
+            <label>
+              Series
+              <select id="seriesSelect">
+                <option value="ANY">Mixed S, T, F, G</option>
+                <option value="NRIC">NRIC only: S, T</option>
+                <option value="FIN">FIN only: F, G</option>
+                <option value="S">S NRIC</option>
+                <option value="T">T NRIC</option>
+                <option value="F">F FIN</option>
+                <option value="G">G FIN</option>
+                <option value="M">M FIN format-only</option>
+              </select>
+            </label>
+            <label>
+              Count
+              <input id="countInput" type="number" min="1" max="250" value="10" />
+            </label>
+            <label>
+              Export as
+              <select id="formatSelect">
+                <option value="plain">Plain text</option>
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+                <option value="typescript">TypeScript</option>
+                <option value="python">Python</option>
+                <option value="sql">SQL</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="action-row">
+            <button class="primary-button" id="generateButton" type="button">Generate list</button>
+            <button class="secondary-button" id="copyButton" type="button">Copy all</button>
+            <button class="secondary-button" id="downloadButton" type="button">Download</button>
+          </div>
+
+          <div class="result-list" id="resultList" aria-live="polite"></div>
+        </section>
+
+        <section class="panel validator-panel" id="validator">
+          <div class="panel-head">
+            <div>
+              <h2>Validator</h2>
+              <p>Paste an NRIC or FIN to check it.</p>
+            </div>
+          </div>
+          <label class="validator-input">
+            NRIC or FIN
+            <input id="validatorInput" value="S1234567D" autocomplete="off" spellcheck="false" />
+          </label>
+          <div id="validationResult" class="validation-card"></div>
+
+          <div class="export-preview">
+            <div class="preview-head">
+              <h3>Export preview</h3>
+              <button class="text-button" id="copyPreviewButton" type="button">Copy</button>
+            </div>
+            <pre id="exportPreview"></pre>
+          </div>
+        </section>
+      </section>
+
+      <section class="guide" id="how-to" aria-labelledby="how-to-title">
+        <h2 id="how-to-title">How to generate a Singapore NRIC for testing</h2>
+        <ol class="steps">
+          <li><strong>Choose a type.</strong> Pick NRIC, FIN or Either. NRIC is selected by default.</li>
+          <li><strong>Click Generate.</strong> A new checksum-valid number appears instantly. Click again for another.</li>
+          <li><strong>Copy and paste.</strong> Click Copy, or click the number itself, then paste it into your form or test.</li>
+        </ol>
+        <p>
+          Need more than one? Use <a href="#bulk">Bulk generate</a> to create up to 250 values and
+          export them as plain text, CSV, JSON, TypeScript, Python or SQL.
+        </p>
+      </section>
+
+      <section class="guide" id="format" aria-labelledby="format-title">
+        <h2 id="format-title">NRIC and FIN format explained</h2>
+        <p>
+          Every NRIC and FIN has nine characters: a prefix letter, seven digits and a check
+          letter, for example <span class="mono">S1234567D</span>. The prefix tells you which
+          series the number belongs to.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Prefix</th><th>Type</th><th>Issued to</th><th>This tool</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">S</td><td>NRIC</td><td>Citizens and permanent residents born or registered before 2000</td><td>Generates and validates checksum</td></tr>
+              <tr><td class="mono">T</td><td>NRIC</td><td>Citizens and permanent residents born or registered from 2000</td><td>Generates and validates checksum</td></tr>
+              <tr><td class="mono">F</td><td>FIN</td><td>Foreigners issued a FIN before 2000</td><td>Generates and validates checksum</td></tr>
+              <tr><td class="mono">G</td><td>FIN</td><td>Foreigners issued a FIN from 2000 to 2021</td><td>Generates and validates checksum</td></tr>
+              <tr><td class="mono">M</td><td>FIN</td><td>Foreigners issued a FIN from 1 January 2022</td><td>Format only</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>NRIC checksum algorithm</h3>
+        <ol class="steps">
+          <li>Multiply the seven digits by the weights <span class="mono">2, 7, 6, 5, 4, 3, 2</span> and add the results.</li>
+          <li>Add <span class="mono">4</span> if the prefix is T or G.</li>
+          <li>Divide by 11 and keep the remainder (0 to 10).</li>
+          <li>
+            Look the remainder up in the check-letter table:
+            <span class="mono">J Z I H G F E D C B A</span> for S and T, or
+            <span class="mono">X W U T R Q P N M L K</span> for F and G.
+          </li>
+        </ol>
+        <p>
+          <strong>Worked example.</strong> For <span class="mono">S1234567</span>:
+          1&times;2 + 2&times;7 + 3&times;6 + 4&times;5 + 5&times;4 + 6&times;3 + 7&times;2 = 106.
+          106 divided by 11 leaves a remainder of 7, and position 7 in the S table is
+          <span class="mono">D</span>, so the full number is <span class="mono">S1234567D</span>.
+        </p>
+      </section>
+
+      <section class="content-grid" id="qa">
+        <article>
+          <h2>What this tool is good for</h2>
+          <p>
+            Use it for registration forms, regex checks, validation messages, API fixtures,
+            spreadsheet samples, demos, and automated tests that need realistic Singapore
+            NRIC or FIN-shaped values.
+          </p>
+        </article>
+        <article>
+          <h2>What it does not do</h2>
+          <p>
+            A checksum-valid value is not a real-world identity check. This tool cannot
+            verify issuance, personhood, citizenship, residency, pass status, or ownership.
+          </p>
+        </article>
+        <article>
+          <h2>Safer by design</h2>
+          <p>
+            Numbers are generated and checked by plain JavaScript in your browser. The values
+            you generate or paste are never sent to Aivoryx, AI services, or a validation
+            server. We only collect anonymous page-visit statistics.
+          </p>
+        </article>
+      </section>
+
+      <section class="faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <details open>
+          <summary>What is a Singapore NRIC generator?</summary>
+          <p>A Singapore NRIC generator creates random numbers that follow the NRIC or FIN format and pass the checksum, so developers and QA testers can fill in forms, seed databases and write automated tests without using a real person’s identity number.</p>
+        </details>
+        <details>
+          <summary>Are the generated NRIC numbers real?</summary>
+          <p>No. Every number is random, synthetic test data. A value that passes the checksum only has the right structure; it does not prove that the number was ever issued or that it belongs to anyone.</p>
+        </details>
+        <details>
+          <summary>What is the format of an NRIC or FIN?</summary>
+          <p>Nine characters: one prefix letter (S or T for NRIC; F, G or M for FIN), seven digits, and one check letter calculated from the prefix and digits. Example: S1234567D.</p>
+        </details>
+        <details>
+          <summary>How is the NRIC checksum calculated?</summary>
+          <p>Multiply the seven digits by the weights 2, 7, 6, 5, 4, 3, 2 and add the results. Add 4 if the prefix is T or G. Take the remainder after dividing by 11 and look it up in the check-letter table: J Z I H G F E D C B A for S and T, or X W U T R Q P N M L K for F and G. For S1234567 the sum is 106, the remainder is 7, and the check letter is D.</p>
+        </details>
+        <details>
+          <summary>What is the difference between NRIC and FIN?</summary>
+          <p>An NRIC (National Registration Identity Card number) is issued to Singapore citizens and permanent residents and starts with S or T. A FIN (Foreign Identification Number) is issued to foreigners holding long-term passes and starts with F, G or M. Both share the same nine-character layout.</p>
+        </details>
+        <details>
+          <summary>Why is the M-series FIN handled differently?</summary>
+          <p>M-series FINs were introduced on 1 January 2022. The format is public, but the official checksum rule has not been published, so this tool generates and checks M-series values by format only instead of claiming checksum verification.</p>
+        </details>
+        <details>
+          <summary>Is generated or validated data uploaded?</summary>
+          <p>No. Generation, validation, copying and exports all run locally in your browser. The numbers you generate or paste are never sent to a server.</p>
+        </details>
+        <details>
+          <summary>Is this NRIC generator free?</summary>
+          <p>Yes. It is free, has no sign-up, and has no limit on how many numbers you generate.</p>
+        </details>
+        <details>
+          <summary>Can I use these values in production?</summary>
+          <p>No. Use them only as synthetic test data. Do not use generated NRIC or FIN values for authentication, account recovery, KYC, or any workflow involving a real person.</p>
+        </details>
+      </section>
+
+      <section class="more-tools" id="more-tools" aria-labelledby="more-tools-title">
+        <div class="more-tools-head">
+          <div>
+            <p class="kicker">Aivoryx tools kit</p>
+            <h2 id="more-tools-title">More free tools from Aivoryx</h2>
+          </div>
+          <a class="secondary-button small" href="https://aivoryx.com/">Visit aivoryx.com <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <ul class="tool-grid">
+          <li>
+            <a class="tool-card" href="https://jsonbeautifier.aivoryx.com/">
+              <span class="tool-icon amber"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1" /><path d="M16 3h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-1" /></svg></span>
+              <span class="tool-body">
+                <span class="tool-name">JSON Beautifier</span>
+                <span class="tool-desc">Format, validate, minify and diff JSON, or convert it to CSV, YAML or XML.</span>
+                <span class="tool-host">jsonbeautifier.aivoryx.com <span aria-hidden="true">&rarr;</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="tool-card" href="https://pdf-tools.aivoryx.com/">
+              <span class="tool-icon red"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5" /><path d="M9 13h6M9 17h6" /></svg></span>
+              <span class="tool-body">
+                <span class="tool-name">PDF Tools</span>
+                <span class="tool-desc">Merge, split, compress, watermark and unlock PDFs in your browser.</span>
+                <span class="tool-host">pdf-tools.aivoryx.com <span aria-hidden="true">&rarr;</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="tool-card" href="https://image-tools.aivoryx.com/">
+              <span class="tool-icon green"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" /><circle cx="8.5" cy="9.5" r="1.5" /><path d="m21 15-5-5L5 20" /></svg></span>
+              <span class="tool-body">
+                <span class="tool-name">Image Tools</span>
+                <span class="tool-desc">Compress, convert and resize images, or remove backgrounds.</span>
+                <span class="tool-host">image-tools.aivoryx.com <span aria-hidden="true">&rarr;</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="tool-card" href="https://secret.aivoryx.com/">
+              <span class="tool-icon violet"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4" /><path d="m11 12 9-9" /><path d="m16 7 3 3" /></svg></span>
+              <span class="tool-body">
+                <span class="tool-name">Secret</span>
+                <span class="tool-desc">Share a password or API key through a one-time link that self-destructs.</span>
+                <span class="tool-host">secret.aivoryx.com <span aria-hidden="true">&rarr;</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="tool-card" href="https://fileshare.aivoryx.com/">
+              <span class="tool-icon cyan"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4" /><path d="m7 9 5-5 5 5" /><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" /></svg></span>
+              <span class="tool-body">
+                <span class="tool-name">FileShare</span>
+                <span class="tool-desc">Upload a file and get a shareable link with expiry, download limits and a password.</span>
+                <span class="tool-host">fileshare.aivoryx.com <span aria-hidden="true">&rarr;</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="tool-card" href="https://vault.aivoryx.com/">
+              <span class="tool-icon blue"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10V6z" /><path d="m9 12 2 2 4-4" /></svg></span>
+              <span class="tool-body">
+                <span class="tool-name">Vault</span>
+                <span class="tool-desc">A password vault that flags reused, weak and breached passwords.</span>
+                <span class="tool-host">vault.aivoryx.com <span aria-hidden="true">&rarr;</span></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 <a href="https://aivoryx.com/">Aivoryx</a>. All processing happens in your browser.</span>
+      <nav aria-label="More from Aivoryx">
+        <a href="https://jsonbeautifier.aivoryx.com/">JSON Beautifier</a>
+        <a href="https://pdf-tools.aivoryx.com/">PDF Tools</a>
+        <a href="https://image-tools.aivoryx.com/">Image Tools</a>
+        <a href="https://secret.aivoryx.com/">Secret</a>
+        <a href="https://fileshare.aivoryx.com/">FileShare</a>
+        <a href="https://vault.aivoryx.com/">Vault</a>
+      </nav>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/src/app.js?v=4" type="module"></script>
+  </body>
+</html>
